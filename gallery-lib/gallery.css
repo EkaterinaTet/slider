@@ -1,0 +1,81 @@
+.gallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  /*если использовался текст на картинках, то в сафари может быть его выделение, поэтому добавляем сюда: -webkit-user-selecr: none;*/
+}
+.gallery__line {
+  overflow: hidden;
+}
+.gallery__slide {
+  min-height: 1px;
+  float: left;
+  transform: translateZ(0); /*чтобы избежать миганий при пролистывании слайдов*/
+}
+.gallery__draggable {
+  cursor: grabbing;
+}
+.gallery__dots {
+  display: flex;
+  justify-content: center;
+}
+.gallery__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0.4rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+.gallery__dot:hover,
+.gallery__dot--active {
+  background: #888;
+}
+.gallery__nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0;
+}
+
+.gallery__nav-left,
+.gallery__nav-right {
+  position: absolute;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  text-indent: -1234em;
+  top: 50%;
+  margin-top: -4rem;
+  transition: all 0.3s;
+}
+.gallery__nav-disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.gallery__nav-left {
+  background: url("./img/arrow-left.svg") no-repeat center;
+  background-size: contain;
+  left: 0;
+}
+.gallery__nav-right {
+  background: url("./img/arrow-right.svg") no-repeat center;
+  background-size: contain;
+  right: 0;
+}
+
+/*убираем стрелочки на телефонах*/
+@media screen and (max-width: 700px) {
+  .gallery {
+    padding: 0;
+  }
+  .gallery__nav {
+    display: none;
+  }
+}
