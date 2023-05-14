@@ -1,0 +1,42 @@
+body {
+  padding: 1rem;
+  margin: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.title {
+  font-size: 35px;
+  text-align: center;
+}
+.slide {
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-1 {
+  background-image: url(./images/item2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-2 {
+  background-image: url(./images/item1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-3 {
+  background-image: url(./images/item3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./images/item4.jpg);
+}
+
+/*Если бы мы вставляли изображения через html - img, то нужно было бы здесь добавить:
+img{
+  pointer-events: none;
+}
+*/
