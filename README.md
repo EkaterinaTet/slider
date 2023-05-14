@@ -7,4 +7,4 @@
 ![JavaScript](https://img.shields.io/badge/-JavaScript-f7df1e?logo=javaScript&logoColor=black)
 
 
-## [Страница проекта на GitHubPages](https://ekaterinatet.github.io/photo-website/))
+## [Страница проекта на GitHubPages](https://ekaterinatet.github.io/slider/)
